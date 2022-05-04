@@ -700,3 +700,16 @@ a:focus {
 }
 
 /* end footer section*/
+
+/* Login Section */
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 2% auto;
+  text-align: center;
+}
+
+.btn-main {
+  background-color: #0a0057;
+  color: #fff;
+}

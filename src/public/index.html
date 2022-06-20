@@ -704,7 +704,21 @@
   <!-- <div class="container">
     <input type="text" id="msg" /> <button type="button" onclick="sendMessage()">Send</button>
   </div> -->
-
+  <div class="container">
+     <!-- Notification -->
+ <div id="toastNotice" style="position: relative; background-color: aliceblue;" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="1000000000">
+  <div class="toast-header">
+    <strong class="mr-auto">Package Saved</strong>
+    <small class="text-muted">now</small>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body">
+    The Package Details you entered are now saved.
+  </div>
+</div>
+<!-- End Notification -->
   <!-- Package Delivery -->
   <div class="container m-5 contact_form-container">
     <form id="packageDeliveryForm">
@@ -718,20 +732,9 @@
     </form>
   </div>
   <!-- End Package Delivery -->
-  <!-- Notification -->
-  <div id="toastNotice" style="position: relative; min-height: 200px;" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="1000000000">
-    <div class="toast-header">
-      <strong class="mr-auto">Package Saved</strong>
-      <small class="text-muted">now</small>
-      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="toast-body">
-      The Package Details you entered are now saved.
-    </div>
   </div>
-  <!-- End Notification -->
+
+ 
 
   <!-- footer section -->
   <section class="container-fluid footer_section">

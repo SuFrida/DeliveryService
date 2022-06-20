@@ -2,21 +2,29 @@ import { Schema, model } from "mongoose";
 
 const schema = new Schema({
     id_package: {
-        type: Number,
+        type: String,
         required: true
     },
     id_product: {
-        type: Number
+        type: String,
+        required: true
     },
     id_purchase: {
-        type: Number
+        type: String,
+        required: true
     },
     product_location: {
-        type: String
+        type: String,
+        required: true
     },
     final_location: {
-        type: String
+        type: String,
+        required: true
+    },
+    id_employee: {
+        type: String,
+        required: true
     }
 })
 
-export default model('package', schema)
+export default model('package', schema);

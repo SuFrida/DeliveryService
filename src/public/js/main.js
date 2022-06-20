@@ -2,7 +2,9 @@ import { loadPackages } from "./socket.js";
 import {onHandleSubmit} from "./ui.js";
 
 loadPackages();
+//loadPurchase();
 
-const packageForm = document.querySelector('#packageDeliveryForm')
+const packageDeliveryForm = document.querySelector('#packageDeliveryForm');
+//const purchaseForm = document.querySelector('#purchaseForm');
 
-packageForm.addEventListener('submit', onHandleSubmit)
+packageDeliveryForm.addEventListener('submit', onHandleSubmit);

@@ -148,7 +148,7 @@
                         <a class="nav-link pr-0" href="contact.html">Contact us</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="login.html"> Login </a>
+                        <a class="nav-link" href="purchase.html"> Purchase </a>
                       </li>
                     </ul>
 
@@ -166,32 +166,33 @@
   </div>
 
   <section class="login">
-    <!-- Login Section -->
-  <form class="form-signin">
-    <img class="mb-4 form-img" src="images/logo.png" alt="" width="72" height="72">
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div>
-    <button class="btn btn-lg btn-main text-white btn-block" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">© 2022</p>
-    <p class="mt-5 mb-3 text-muted">Don't have an account yet?</p>
-  <button class="btn btn-lg btn-main text-white btn-block" type="button"><a href="register.html" style="color: #fff;">Register Now!</a></button>
-  </form>
-  <!-- /Login Section -->
-  </section>
-
+    <!-- Purchase Made -->
+  <div class="container">
+    <form id="purchaseForm">
+      <input type="text" id="id_purchase" placeholder="purchase id">
+      <input type="text" id="id_product" placeholder="product id">
+      <input type="text" id="quantity" placeholder="quantity">
+      <button class="btn btn-primary" id="toastbtn2">Send Purchase</button>
+    </form>
+  </div>
+  <!-- End Purchase -->
   
 
-
-
-
+  <!-- Notification -->
+  <div id="toast2" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="mr-auto">Purchase Made</strong>
+      <small class="text-muted">now</small>
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="toast-body">
+      The purchase details have been saved.
+    </div>
+  </div>
+  <!-- End Notification -->
+  </section>
 
   <!-- info section -->
   <section class="info_section ">
@@ -262,7 +263,7 @@
                   <a href="index.html"> Home</a>
                 </li>
                 <li>
-                  <a href="login.html"> Login</a>
+                  <a href="purchase.html"> Purchase</a>
                 </li>
                 <li>
                   <a href="register.html">Register</a>
@@ -308,7 +309,14 @@
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
-
+  
+  <script>
+    document.getElementById("toastbtn2").onclick = function() {
+    var myAlert2 =document.getElementById('toast2');//select id of toast
+    var bsAlert2 = new bootstrap.Toast(myAlert2);//inizialize it
+    bsAlert2.show();//show it
+    }
+  </script>
 
 
 </body>

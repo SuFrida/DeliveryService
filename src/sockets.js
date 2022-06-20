@@ -1,17 +1,32 @@
 import packages from './models/package.js';
+import users from './models/user.js';
+import purchase from './models/purchase.js';
+import notification from './models/notification.js';
+import employee from './models/employee.js';
 
 export default (io) => {
     io.on('connection', (socket) => {
+
         const emitPackages = async () => {
-            const packages = await packages.find()
-            io.emit('loadPackages', packages);
+            const packs = await packages.find();
+            io.emit('loadPackages', packs);
         }
         emitPackages();
 
-        socket.on('newPackage', async (data) => {
-           const newPackage = new Package(data);
-           const savedPackage = await newPackage.save();
-           console.log(savedPackage);
+        const emitPurchase = async () => {
+            const purch = await purchase.find();
+            io.emit('loadPurchase', purch);
+        }
+        emitPurchase();
+
+        socket.on('newPurchase', data => {
+               console.log(data);
+            })
+
+        socket.on('newPackages', data => {
+        //const newPackage = new packages(data);
+        //const savedPackage = await newPackage.save();
+           console.log(data);
         })
     })
 }
